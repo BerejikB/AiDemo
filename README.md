@@ -7,14 +7,14 @@ Included is C# code I have along with some free assets from the Unity Asset stor
 
 REQUIREMENTS:
 CURRENT:
-•	AI follows player in different stages
-	Stage 1) slow stalk, if the AI sees the player at a certain distance, it will slowly stalk the player. If player moves out of range it will return to it's wander phase. Can be scared off at this point
+	AI follows player in different stages
+	Stage 1) slow stalk, if the AI sees the player at a certain distance, it will slowly stalk the player. If player moves out of range 	             it will return to it's wander phase. Can be scared off at this point
 	
-	Stage 2) After AI has stalked player and is within the stage 2 range, it will begin a faster walk. Can still be scared off at this point
+	Stage 2) After AI has stalked player and is within the stage 2 range, it will begin a faster walk. Can still be scared off at this 		    point
 	
 	Stage 3) After the AI has closed the distance, it will charge and **TODO attack** the player. Can not be scared off at this stage.
 	
-	"Spooked" Stage) If the player comes within a certain range of the AI without it "visually" detecting the player, it will get "spooked" and run away in the opposite direction untill it meets the 'maxDistance" (which is also its max visual detect range). After it reaches the specified distance, it will stalk the player, regardless of if the player runs out of range, and begin stage 2 and 3 normally.
+	"Spooked" Stage) If the player comes within a certain range of the AI without it "visually" detecting the player, it will get 				 "spooked" and run away in the opposite direction untill it meets the 'maxDistance" (which is also its max visual 			   detect range). After it reaches the specified distance, it will stalk the player, regardless of if the player runs 				out of range, and begin stage 2 and 3 normally.
  
 
 TO DO: AI should freeze in place if the player looks at it when stalking during stage 1.
