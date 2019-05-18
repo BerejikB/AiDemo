@@ -265,6 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efa375f619e42e843859aae76cbcf1a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHealth: 0
 --- !u!1001 &1043473114
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -459,9 +460,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isChasing: 0
   isSpooked: 0
+  isRetreating: 0
   standTimerRunning: 0
+  isAngry: 0
   distanceToPlayer: 0
   offset: 1
+  guardHealth: 100
   wanderSphere: 8
   maxDistance: 90
   stage1Dist: 30
@@ -473,7 +477,7 @@ MonoBehaviour:
   wanderPoint: {x: 0, y: 0, z: 0}
   colorchanger: {fileID: 1233336707}
   Guardo: {fileID: 1331894641}
-  CloseRangeDetect: {fileID: 0}
+  CloseRangeDetect: {fileID: 1975764317}
 --- !u!195 &1331894646
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -520,6 +524,14 @@ PrefabInstance:
     - target: {fileID: 100168, guid: b235179bd2a63d1468dd430670338c55, type: 3}
       propertyPath: m_Name
       value: Guard
+      objectReference: {fileID: 0}
+    - target: {fileID: 400170, guid: b235179bd2a63d1468dd430670338c55, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400170, guid: b235179bd2a63d1468dd430670338c55, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400168, guid: b235179bd2a63d1468dd430670338c55, type: 3}
       propertyPath: m_LocalPosition.x
@@ -573,12 +585,12 @@ PrefabInstance:
       propertyPath: m_UpdateMode
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 400170, guid: b235179bd2a63d1468dd430670338c55, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
+    - target: {fileID: 9500000, guid: b235179bd2a63d1468dd430670338c55, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 400170, guid: b235179bd2a63d1468dd430670338c55, type: 3}
-      propertyPath: m_LocalPosition.x
+    - target: {fileID: 9500000, guid: b235179bd2a63d1468dd430670338c55, type: 3}
+      propertyPath: m_ApplyRootMotion
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400316, guid: b235179bd2a63d1468dd430670338c55, type: 3}
@@ -617,6 +629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efa375f619e42e843859aae76cbcf1a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHealth: 0
 --- !u!1 &1975764317
 GameObject:
   m_ObjectHideFlags: 0
