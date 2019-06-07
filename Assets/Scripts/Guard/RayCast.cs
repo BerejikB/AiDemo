@@ -10,7 +10,7 @@ public class RayCast : MonoBehaviour
     string hitFeedback;
     public LineRenderer laserLineRenderer;
     public float laserMaxLength = 5f;
-   
+
     public float interactionRayLength = 5.0f;
 
 
@@ -54,8 +54,7 @@ public class RayCast : MonoBehaviour
                 
                     Debug.Log(hitFeedback);
                     GuardBoi.GetComponent<GuardBoi>().enabled = true;
-                
-               
+  
             }
         }
         else
@@ -67,7 +66,6 @@ public class RayCast : MonoBehaviour
     }
 
 
-    
 
     Vector3 DetectHit(Vector3 startPos, float distance, Vector3 direction)
     {

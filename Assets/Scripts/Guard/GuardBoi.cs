@@ -44,6 +44,10 @@ public class GuardBoi : MonoBehaviour
 
     void Update()
     {
+        if (guardHealth <= 0)
+        {
+            Dead();
+        }
         ScanForPlayer();
         Player = GameObject.Find("Player");
         distanceToPlayer = Vector3.Distance(Guardo.transform.position, Player.transform.position);
@@ -72,7 +76,11 @@ public class GuardBoi : MonoBehaviour
         }
 
     }
-
+    public void ApplyDamage(int appliedDmg)
+    {
+        guardHealth -= appliedDmg;
+        isSpooked = true;
+    }
     void BehaviourDecision()
     {
         if (isRetreating)
@@ -361,6 +369,11 @@ public class GuardBoi : MonoBehaviour
         {
             inHitRange = false;
         }
+    }
+
+    void Dead()
+    {
+        Destroy(Guardo);
     }
 }
 
