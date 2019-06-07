@@ -38,7 +38,6 @@ public class GuardBoi : MonoBehaviour
         animate = GetComponent<Animator>();
         animate.StartPlayback();
         navmesh = GetComponent<NavMeshAgent>();
-
         Player = GameObject.Find("Player");
         wanderPoint = WanderPointCalc();
     }
@@ -54,8 +53,6 @@ public class GuardBoi : MonoBehaviour
     void ChaseOn()
     {
         isChasing = true;
-
-
     }
     void Reseto()
     {
@@ -75,7 +72,7 @@ public class GuardBoi : MonoBehaviour
         }
 
     }
-    
+
     void BehaviourDecision()
     {
         if (isRetreating)
@@ -101,8 +98,6 @@ public class GuardBoi : MonoBehaviour
             Reseto();
             colorchanger.material.color = Color.blue;
         }
-
-
     }
     public Vector3 WanderPointCalc()
     {
@@ -124,9 +119,9 @@ public class GuardBoi : MonoBehaviour
             }
             else
             {
-              
+
                 Stand();
-              
+
             }
 
         }
@@ -165,7 +160,7 @@ public class GuardBoi : MonoBehaviour
 
         else
         {
-            
+
             navmesh.speed = 0.5f;
             navmesh.SetDestination(wanderPoint);
         }
@@ -182,7 +177,7 @@ public class GuardBoi : MonoBehaviour
             }
             else
             {
-               
+
                 return;
             }
         }
@@ -247,7 +242,7 @@ public class GuardBoi : MonoBehaviour
     }
     void Stalk()
     {
-       
+
         navmesh.speed = 0.3f;
         navmesh.SetDestination(Player.transform.position);
         colorchanger.material.color = Color.yellow;
@@ -297,7 +292,7 @@ public class GuardBoi : MonoBehaviour
     }
     void Chase()
     {
-      
+
         navmesh.SetDestination(Player.transform.position);
         colorchanger.material.color = Color.red;
         if (distanceToPlayer >= 5f)
@@ -315,7 +310,7 @@ public class GuardBoi : MonoBehaviour
     }
     void Spooked()
     {
-        
+
         navmesh.speed = 5.5f;
         transform.rotation = Quaternion.LookRotation(transform.position - Player.transform.position);
         Vector3 runTo = transform.position + transform.forward * (maxDistance - 10);
@@ -327,7 +322,6 @@ public class GuardBoi : MonoBehaviour
             Stalk();
         }
     }
-
     void Attack()
     {
         int switch_on = rnd.Next(1, 2);
@@ -343,10 +337,8 @@ public class GuardBoi : MonoBehaviour
                     transform.parent.GetComponent<Player>().playerHealth -= 10;
                 }
                 //transform.rotation = Quaternion.LookRotation(transform.position - Player.transform.position);
-
-
-
                 break;
+
             case 2:
                 if (inHitRange)
                 {
@@ -359,13 +351,11 @@ public class GuardBoi : MonoBehaviour
 
 
     }
-
     void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.tag == "Player")
         {
             inHitRange = true;
-
         }
         else
         {
