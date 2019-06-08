@@ -8,7 +8,7 @@ public class PlayerWeaponAttack : MonoBehaviour
     public int heavyDamage = 50;
     public int appliedDmg;
     public bool isSwinging;
-    Animator anim;
+    public Animator anim;
     public float heavyAttkChargeTime = 0.3f;
     public bool heavycharging;
     GameObject Target;
