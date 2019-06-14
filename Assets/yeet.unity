@@ -974,10 +974,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3978643710218937160}
+  - component: {fileID: 3978643710218937164}
   - component: {fileID: 3978643710218937165}
   - component: {fileID: 3978643710218937162}
   - component: {fileID: 3978643710218937163}
-  - component: {fileID: 3978643710218937164}
   - component: {fileID: 3978643710218937166}
   - component: {fileID: 3978643710218937167}
   m_Layer: 0
@@ -1081,6 +1081,7 @@ MonoBehaviour:
   heavyDamage: 50
   appliedDmg: 0
   isSwinging: 0
+  anim: {fileID: 0}
   heavyAttkChargeTime: 0.3
   heavycharging: 0
 --- !u!54 &3978643710218937167
